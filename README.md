@@ -10,6 +10,7 @@ official api doc is so confusing, this just save your lives.
   chore: some chore string , like bat files
   feature: new feature add
   todo: add todo string
+  docs: docs update string
   ```
   
  

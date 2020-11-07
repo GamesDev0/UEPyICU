@@ -14,9 +14,9 @@ official api doc is so confusing, this just save your lives.
     4.  **wiki site**
         - click https://github.com/GamesDev0/UEPyICU/wiki
     5.  **add reqeuest**
-        - click https://github.com/GamesDev0/UEPyICU/projects/1 add a card to **want** column
-gin
-3. git commit format
+        - click https://github.com/GamesDev0/UEPyICU/projects/1 add a card to **want** column gin
+
+2. git commit format
 
     ```
     update: update string
@@ -26,7 +26,7 @@ gin
     docs: docs update string
     ```
 
-6. example
+3. example
     ```python
     # print info on viewport 
     icu_lib = unreal.UEPyICUBPLibrary

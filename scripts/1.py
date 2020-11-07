@@ -1,8 +1,9 @@
 # open dialog
+icu_lib = unreal.UEPyICUBPLibrary
 
-files = unreal.UEPyICUBPLibrary.open_file_dialog("open dialog", ".", "*")
-print(files)
+files = icu_lib.open_file_dialog("open dialog", ".", "*")
+# if utf8 string , encode
+print(files[0].encode('utf8'))
 
 # print info on viewport
-icu_lib = unreal.UEPyICUBPLibrary
 icu_lib.log_info_on_screen("Hello , UEPyICU")

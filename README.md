@@ -1,0 +1,14 @@
+# UEPyICU
+official api doc is so confusing, this just save your lives.
+- add reqeuest 
+  - click https://github.com/GamesDev0/UEPyICU/projects/1 add a card to **want** column
+- git commit format
+  ```
+  update: update string
+  chore: some chore string , like bat files
+  feature: new feature add
+  todo: add todo string
+  ```
+  
+ 
+  

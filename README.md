@@ -14,3 +14,10 @@ official api doc is so confusing, this just save your lives.
   ```
 - visual studio version : **vs 2015**
 - ue4 version of the project : **4.24.3**
+
+- example
+  ```python
+  # print info on viewport 
+  icu_lib = unreal.UEPyICUBPLibrary
+  icu_lib.log_info_on_screen("Hello , UEPyICU")
+  ```

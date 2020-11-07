@@ -15,6 +15,7 @@
 #include "Framework/Application/SlateApplication.h"
 
 #include "LevelEditor.h"
+#include "EditorViewportClient.h"
 //#endif
 
 
@@ -40,32 +41,35 @@
 UCLASS()
 class UUEPyICUBPLibrary : public UBlueprintFunctionLibrary
 {
-	GENERATED_UCLASS_BODY()
+    GENERATED_UCLASS_BODY()
 
-	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Execute Sample function", Keywords =
-		"UEPyICU sample test testing"), Category = "UEPyICUTesting")
-	static float UEPyICUSampleFunction(float Param);
+    UFUNCTION(BlueprintCallable, meta = (DisplayName = "Execute Sample function", Keywords =
+        "UEPyICU sample test testing"), Category = "UEPyICUTesting")
+    static float UEPyICUSampleFunction(float Param);
 
 
-	UFUNCTION(BlueprintCallable)
-	static void ChangeViewMode();
+    UFUNCTION(BlueprintCallable)
+    static void ChangeViewMode();
 
-	UFUNCTION(BlueprintCallable)
-	static void LogInfoOnScreen(FString InputString);
+    UFUNCTION(BlueprintCallable)
+    static void LogInfoOnScreen(FString InputString);
 
-	UFUNCTION(BlueprintCallable)
-	static void LogWarnOnScreen(FString InputString);
+    UFUNCTION(BlueprintCallable)
+    static void LogWarnOnScreen(FString InputString);
 
-	UFUNCTION(BlueprintCallable)
-	static void LogErrorOnScreen(FString InputString);
+    UFUNCTION(BlueprintCallable)
+    static void LogErrorOnScreen(FString InputString);
 
-	UFUNCTION(BlueprintCallable)
-	static void SetSwitchParameter(
-		UMaterialInstanceConstant* MaterialInstance, FName ParameterName, bool SwitchEnabled, bool SwitchValue
-	);
+    UFUNCTION(BlueprintCallable)
+    static void SetSwitchParameter(
+        UMaterialInstanceConstant* MaterialInstance, FName ParameterName, bool SwitchEnabled, bool SwitchValue
+    );
 
-	UFUNCTION(BlueprintCallable)
-	static TArray<FString> OpenFileDialog(
-		const FString& DialogTitle, const FString& DefaultPath, const FString& FileTypes
-	);
+    UFUNCTION(BlueprintCallable)
+    static TArray<FString> OpenFileDialog(
+        const FString& DialogTitle, const FString& DefaultPath, const FString& FileTypes
+    );
+
+    UFUNCTION(BlueprintCallable)
+    static void SomeFunc();
 };

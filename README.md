@@ -12,6 +12,4 @@ official api doc is so confusing, this just save your lives.
   todo: add todo string
   docs: docs update string
   ```
-  
- 
-  
+- visual studio version : vs 2015

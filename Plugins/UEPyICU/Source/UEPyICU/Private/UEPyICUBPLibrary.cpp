@@ -108,5 +108,6 @@ TArray<FString> UUEPyICUBPLibrary::OpenFileDialog(
 
 bool UUEPyICUBPLibrary::IsAllGlobalShaderCompiled()
 {
+    //ref: Runtime/Engine/Public/ShaderCompiler.h line 620 
     return IsGlobalShaderMapComplete();   
 }

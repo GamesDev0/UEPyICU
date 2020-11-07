@@ -3,6 +3,21 @@
 #pragma once
 
 #include "Kismet/BlueprintFunctionLibrary.h"
+
+//#if WITH_EDITOR
+#include "Editor/UnrealEd/Classes/MaterialGraph/MaterialGraph.h"
+#include "Editor/UnrealEd/Public/Kismet2/BlueprintEditorUtils.h"
+#include "Editor/UnrealEd/Classes/MaterialGraph/MaterialGraphSchema.h"
+#include "Materials/MaterialInstanceConstant.h"
+
+#include "DesktopPlatform/Public/IDesktopPlatform.h"
+#include "DesktopPlatform/Public/DesktopPlatformModule.h"
+#include "Framework/Application/SlateApplication.h"
+
+#include "LevelEditor.h"
+//#endif
+
+
 #include "UEPyICUBPLibrary.generated.h"
 
 /* 
@@ -29,4 +44,28 @@ class UUEPyICUBPLibrary : public UBlueprintFunctionLibrary
 
 	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Execute Sample function", Keywords = "UEPyICU sample test testing"), Category = "UEPyICUTesting")
 	static float UEPyICUSampleFunction(float Param);
+
+
+	UFUNCTION(BlueprintCallable)
+		static void ChangeViewMode();
+
+	UFUNCTION(BlueprintCallable)
+		static void LogInfoOnScreen(FString InputString);
+
+	UFUNCTION(BlueprintCallable)
+		static void LogWarnOnScreen(FString InputString);
+
+	UFUNCTION(BlueprintCallable)
+		static void LogErrorOnScreen(FString InputString);
+
+	UFUNCTION(BlueprintCallable)
+		static void SetSwitchParameter(
+			UMaterialInstanceConstant* MaterialInstance, FName ParameterName, bool SwitchEnabled, bool SwitchValue
+		);
+
+	UFUNCTION(BlueprintCallable)
+		static TArray<FString> OpenFileDialog(
+			const FString& DialogTitle, const FString& DefaultPath, const FString& FileTypes, TArray<FString>& OutFileNames
+		);
+	
 };

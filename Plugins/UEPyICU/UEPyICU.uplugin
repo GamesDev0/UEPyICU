@@ -17,7 +17,7 @@
 	"Modules": [
 		{
 			"Name": "UEPyICU",
-			"Type": "Runtime",
+			"Type": "Editor",
 			"LoadingPhase": "PreLoadingScreen"
 		}
 	]

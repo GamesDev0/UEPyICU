@@ -71,5 +71,5 @@ class UUEPyICUBPLibrary : public UBlueprintFunctionLibrary
     );
 
     UFUNCTION(BlueprintCallable)
-    static void SomeFunc();
+    static bool IsAllGlobalShaderCompiled();
 };

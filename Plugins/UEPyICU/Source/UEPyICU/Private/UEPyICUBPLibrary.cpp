@@ -2,6 +2,7 @@
 
 #include "UEPyICUBPLibrary.h"
 #include "UEPyICU.h"
+#include "ShaderCompiler.h"
 
 UUEPyICUBPLibrary::UUEPyICUBPLibrary(const FObjectInitializer& ObjectInitializer)
     : Super(ObjectInitializer)
@@ -105,6 +106,7 @@ TArray<FString> UUEPyICUBPLibrary::OpenFileDialog(
     return OutFileNames;
 }
 
-void UUEPyICUBPLibrary::SomeFunc()
+bool UUEPyICUBPLibrary::IsAllGlobalShaderCompiled()
 {
+    return IsGlobalShaderMapComplete();   
 }

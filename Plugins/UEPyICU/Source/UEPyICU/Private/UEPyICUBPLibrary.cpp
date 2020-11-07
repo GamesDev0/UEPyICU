@@ -66,6 +66,7 @@ void UUEPyICUBPLibrary::SetSwitchParameter(
 	{
 		if (parameter.bOverride && parameter.ParameterInfo.Name == ParameterName)
 		{
+			parameter.bOverride = SwitchEnabled;
 			parameter.Value = SwitchValue;
 			isExisting = true;
 			break;
@@ -78,7 +79,7 @@ void UUEPyICUBPLibrary::SetSwitchParameter(
 		SwitchParameter.ParameterInfo.Name = ParameterName;
 		SwitchParameter.Value = SwitchValue;
 
-		SwitchParameter.bOverride = true;
+		SwitchParameter.bOverride = SwitchEnabled;
 		StaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
 	}
 

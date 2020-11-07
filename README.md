@@ -8,7 +8,7 @@ official api doc is so confusing, this just save your lives.
         - Editor Scripting Utilities
         - Python Editor Script Plu
     1.  - **now only works in editor time**
-        - if you need runtime , please add a card to the project
+            - if you need runtime , please add a card to the project
     2.  - visual studio version : **vs 2015**
     3.  - ue4 version of the project : **4.24.3**
     4.  **wiki site**

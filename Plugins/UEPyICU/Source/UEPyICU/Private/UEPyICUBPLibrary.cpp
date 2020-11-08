@@ -23,7 +23,7 @@ void UUEPyICUBPLibrary::ChangeViewMode(EEViewModeIndex ViewModeIndex)
         FEditorViewportClient* ViewportClient =
             static_cast<FEditorViewportClient*>(GEditor->GetActiveViewport()->GetClient());
         // set view mode 
-        ViewportClient->SetViewMode((EViewModeIndex)((int)(ViewModeIndex)));
+        ViewportClient->SetViewMode(static_cast<EViewModeIndex>(ViewModeIndex));
     }
 }
 

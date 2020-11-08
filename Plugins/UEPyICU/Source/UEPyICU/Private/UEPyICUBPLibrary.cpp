@@ -20,7 +20,8 @@ void UUEPyICUBPLibrary::ChangeViewMode()
     if (GEditor)
     {
         // get veiwport client
-        FEditorViewportClient* ViewportClient = (FEditorViewportClient*)GEditor->GetActiveViewport()->GetClient();
+        FEditorViewportClient* ViewportClient =
+            static_cast<FEditorViewportClient*>(GEditor->GetActiveViewport()->GetClient());
         // set view mode 
         ViewportClient->SetViewMode(EViewModeIndex::VMI_Unlit);
     }
@@ -110,5 +111,5 @@ TArray<FString> UUEPyICUBPLibrary::OpenFileDialog(
 bool UUEPyICUBPLibrary::IsAllGlobalShaderCompiled()
 {
     //ref: Runtime/Engine/Public/ShaderCompiler.h line 620 
-    return IsGlobalShaderMapComplete();   
+    return IsGlobalShaderMapComplete();
 }

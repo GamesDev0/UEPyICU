@@ -15,7 +15,7 @@ float UUEPyICUBPLibrary::UEPyICUSampleFunction(float Param)
 }
 
 
-void UUEPyICUBPLibrary::ChangeViewMode()
+void UUEPyICUBPLibrary::ChangeViewMode(EEViewModeIndex ViewModeIndex)
 {
     if (GEditor)
     {
@@ -23,7 +23,7 @@ void UUEPyICUBPLibrary::ChangeViewMode()
         FEditorViewportClient* ViewportClient =
             static_cast<FEditorViewportClient*>(GEditor->GetActiveViewport()->GetClient());
         // set view mode 
-        ViewportClient->SetViewMode(EViewModeIndex::VMI_Unlit);
+        ViewportClient->SetViewMode((EViewModeIndex)((int)(ViewModeIndex)));
     }
 }
 

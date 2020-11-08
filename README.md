@@ -14,7 +14,7 @@ official api doc is so confusing, this just save your lives.
     4.  **wiki site**
         - click https://github.com/GamesDev0/UEPyICU/wiki
     5.  **add reqeuest**
-        - click https://github.com/GamesDev0/UEPyICU/projects/1 add a card to **want** column gin
+        - click https://github.com/GamesDev0/UEPyICU/projects/1 add a card to **want** column
 
 2. git commit format
 

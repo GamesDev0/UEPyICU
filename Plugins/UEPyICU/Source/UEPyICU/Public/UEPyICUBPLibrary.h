@@ -114,7 +114,7 @@ enum EEViewModeIndex
 
     Max UMETA(Hidden),
 
-    Unknown = 255 UMETA(DisplayName = "Unknown"),
+    // Unknown = 255 UMETA(DisplayName = "Unknown"),
 };
 
 

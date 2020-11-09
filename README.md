@@ -6,7 +6,7 @@ official api doc is so confusing, this just save your lives.
 
     0.  **need open these plugins**
         - Editor Scripting Utilities
-        - Python Editor Script Plu
+        - Python Editor Script Plugin
     1.  - **now only works in editor time**
             - if you need runtime , please add a card to the project
     2.  - visual studio version : **vs 2015**

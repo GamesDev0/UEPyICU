@@ -1,6 +1,7 @@
 # UEPyICU
 
 official api doc is so confusing, this just save your lives.
+Thanks to https://github.com/20tab/UnrealEnginePython
 
 1. Introduction
 

@@ -156,6 +156,6 @@ class UUEPyICUBPLibrary : public UBlueprintFunctionLibrary
     UFUNCTION(BlueprintCallable)
     static void SelectActor(
         AActor* actor, bool bInSelected = true, bool bNotify = true,
-        bool bSelectEvenIfHidden = true, bool bForceRefresh = false
+        bool bSelectEvenIfHidden = true, bool bForceRefresh = true
     );
 };

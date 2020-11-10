@@ -113,3 +113,10 @@ bool UUEPyICUBPLibrary::IsAllGlobalShaderCompiled()
     //ref: Runtime/Engine/Public/ShaderCompiler.h line 620 
     return IsGlobalShaderMapComplete();
 }
+
+void UUEPyICUBPLibrary::SelectActor(
+    AActor* actor, bool bInSelected, bool bNotify, bool bSelectEvenIfHidden, bool bForceRefresh
+)
+{
+    GEditor->SelectActor(actor, bInSelected, bNotify, bSelectEvenIfHidden, bForceRefresh);
+}

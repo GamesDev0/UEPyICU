@@ -120,3 +120,13 @@ void UUEPyICUBPLibrary::SelectActor(
 {
     GEditor->SelectActor(actor, bInSelected, bNotify, bSelectEvenIfHidden, bForceRefresh);
 }
+
+int32 UUEPyICUBPLibrary::GetCompilingShaderJobCount()
+{
+    return GShaderCompilingManager->GetNumRemainingJobs();
+}
+
+void UUEPyICUBPLibrary::WaitForCompilingShaderDone()
+{
+    GShaderCompilingManager->FinishAllCompilation();
+}

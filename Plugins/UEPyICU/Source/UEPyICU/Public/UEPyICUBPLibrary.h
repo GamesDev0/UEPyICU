@@ -158,4 +158,10 @@ class UUEPyICUBPLibrary : public UBlueprintFunctionLibrary
         AActor* actor, bool bInSelected = true, bool bNotify = true,
         bool bSelectEvenIfHidden = true, bool bForceRefresh = true
     );
+
+    UFUNCTION(BlueprintCallable)
+    static int32 GetCompilingShaderJobCount();
+
+    UFUNCTION(BlueprintCallable)
+    static void WaitForCompilingShaderDone();
 };

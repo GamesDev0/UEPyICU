@@ -11,4 +11,4 @@ print(file_name)
 icu_lib.log_info_on_screen(file_name)
 
 # set view mode 
-icu_lib.change_view_mode(enum.LIT)
+icu_lib.change_view_mode(enum_view_mode_index.LIT)

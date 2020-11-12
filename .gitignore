@@ -5,6 +5,7 @@ Saved/Config/CrashReportClient
 GamesDev0.VC.db
 GamesDev0.VC.VC.opendb
 Plugins/UEPyICU/Binaries/*
+Plugins/UEPyICU/scripts/*
 .vs
 Binaries/*
 Saved/Config/WorldState/*

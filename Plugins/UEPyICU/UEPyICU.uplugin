@@ -18,7 +18,7 @@
     {
       "Name": "UEPyICU",
       "Type": "Editor",
-      "LoadingPhase": "PreLoadingScreen"
+      "LoadingPhase": "PreDefault"
     }
   ],
   "Plugins": [

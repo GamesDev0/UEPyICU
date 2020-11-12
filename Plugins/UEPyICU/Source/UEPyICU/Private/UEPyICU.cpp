@@ -22,7 +22,7 @@ sys.path.insert(0, python_init_script_dir)
 init_script_file_path = os.path.join(python_init_script_dir, '__ue_py_icu_init__.py' )
 
 try:
-    execfile(python_init_script)
+    execfile(init_script_file_path)
 except Exception as e:
     print(e)
 )";

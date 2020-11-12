@@ -9,13 +9,18 @@ import unreal
 import sys 
 import os
 # add plugins python script dir
-python_init_script = \
+python_init_script_dir = \
     os.path.join(
         unreal.Paths.make_standard_filename(
             unreal.Paths.project_plugins_dir()
         ), 
-        'UEPyICU/Scripts/__ue_py_icu_init__.py'
+        'UEPyICU/Scripts'
     )
+# append current dir
+sys.path.insert(0, python_init_script_dir)
+
+init_script_file_path = os.path.join(python_init_script_dir, '__ue_py_icu_init__.py' )
+
 try:
     execfile(python_init_script)
 except Exception as e:

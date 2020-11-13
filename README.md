@@ -30,13 +30,13 @@ Thanks to https://github.com/20tab/UnrealEnginePython
 
 3. example
     ```python
-    icu_lib = unreal.UEPyICUBPLibrary
+    lib_icu = unreal.UEPyICUBPLibrary
     
-    icu_lib.log_error_on_screen("error")
-    icu_lib.log_info_on_screen("info")
-    icu_lib.log_warn_on_screen("warn")
-    file_list = icu_lib.open_file_dialog("title","d:/","*")
-    icu_lib.set_switch_parameter(
+    lib_icu.log_error_on_screen("error")
+    lib_icu.log_info_on_screen("info")
+    lib_icu.log_warn_on_screen("warn")
+    file_list = lib_icu.open_file_dialog("title","d:/","*")
+    lib_icu.set_switch_parameter(
         material_instance,
         "switch_param_name",
         True, # enable swtich
@@ -57,10 +57,10 @@ Thanks to https://github.com/20tab/UnrealEnginePython
      SHADER_COMPLEXITY_WITH_QUAD_OVERDRAW STATIONARY_LIGHT_OVERLAP 
      UNLIT VISUALIZE_BUFFER WIREFRAME
     """
-    icu_lib.change_view_mode(enum.LIT)
+    lib_icu.change_view_mode(enum.LIT)
 
     # this method to select actor even actor is hidden
-    icu_lib.select_actor(actor)
+    lib_icu.select_actor(actor)
     
     # add [ Plugins/UEPyICU/PyLib , Plugins/UEPyICU/PyLib/site-packages ] to sys.path
     # add Plugins/UEPyICU/PyLib/__ue_py_icu_start_up__.py  as startup script

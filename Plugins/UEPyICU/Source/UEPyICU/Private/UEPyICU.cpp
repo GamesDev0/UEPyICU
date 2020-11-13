@@ -71,9 +71,12 @@ void FUEPyICUModule::StartupModule()
 
 void FUEPyICUModule::ShutdownModule()
 {
+    // todo make shut down script works 
     // This function may be called during shutdown to clean up your module.  For modules that support dynamic reloading,
     // we call this function before unloading the module.
-    UE_LOG(
+
+    // seems this will cause crash
+    /*UE_LOG(
         LogTemp, Warning,
         TEXT(
             "#### shut down  script : start #### try load init script Plugins/UEPyICU/Scripts/__ue_py_icu_shut_down__.py"
@@ -85,7 +88,7 @@ void FUEPyICUModule::ShutdownModule()
         TEXT(
             "#### shut down  script :  end  #### try load init script Plugins/UEPyICU/Scripts/__ue_py_icu_shut_down__.py"
         )
-    );
+    );*/
 }
 
 void FUEPyICUModule::OnTick(const float InDeltaTime)

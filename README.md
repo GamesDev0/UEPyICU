@@ -64,5 +64,7 @@ Thanks to https://github.com/20tab/UnrealEnginePython
     
     # add [ Plugins/UEPyICU/PyLib , Plugins/UEPyICU/PyLib/site-packages ] to sys.path
     # add Plugins/UEPyICU/PyLib/__ue_py_icu_start_up__.py  as startup script
-    # -- not works now , support later -- add Plugins/UEPyICU/PyLib/__ue_py_icu_shut_down__.py as shutdown script
+    # -- not works now , support later ----------------------------------------------- 
+    #       Plugins/UEPyICU/PyLib/__ue_py_icu_shut_down__.py as shutdown script
+    # --------------------------------------------------------------------------------
     ```

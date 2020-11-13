@@ -30,7 +30,39 @@ Thanks to https://github.com/20tab/UnrealEnginePython
 
 3. example
     ```python
-    # print info on viewport 
     icu_lib = unreal.UEPyICUBPLibrary
-    icu_lib.log_info_on_screen("Hello , UEPyICU")
+    
+    icu_lib.log_error_on_screen("error")
+    icu_lib.log_info_on_screen("info")
+    icu_lib.log_warn_on_screen("warn")
+    file_list = icu_lib.open_file_dialog("title","d:/","*")
+    icu_lib.set_switch_parameter(
+        material_instance,
+        "switch_param_name",
+        True, # enable swtich
+        True # set switch value to true
+    )
+
+    #### example for change view mode ####
+    enum_view_mode_index = unreal.EViewModeIndex
+    # set view mode 
+    # valid view mode , search with the string you saw in viewport:
+    """
+     BRUSH_WIREFRAME COLLISION_PAWN COLLISION_VISIBILITY GROUP_LOD_COLORATION 
+     HLOD_COLORATION LIGHTING_ONLY LIGHTMAP_DENSITY LIGHT_COMPLEXITY 
+     LIT LIT_DETAIL_LIGHTING LIT_LIGHTMAP_DENSITY LOD_COLORATION 
+     MATERIAL_TEXTURE_SCALE_ACCURACY MESH_UV_DENSITY_ACCURACY 
+     PATH_TRACING PRIMITIVE_DISTANCE_ACCURACY QUAD_OVERDRAW RAY_TRACING_DEBUG 
+     REFLECTION_OVERRIDE REQUIRED_TEXTURE_RESOLUTION SHADER_COMPLEXITY 
+     SHADER_COMPLEXITY_WITH_QUAD_OVERDRAW STATIONARY_LIGHT_OVERLAP 
+     UNLIT VISUALIZE_BUFFER WIREFRAME
+    """
+    icu_lib.change_view_mode(enum.LIT)
+
+    # this method to select actor even actor is hidden
+    icu_lib.select_actor(actor)
+    
+    # add [ Plugins/UEPyICU/PyLib , Plugins/UEPyICU/PyLib/site-packages ] to sys.path
+    # add Plugins/UEPyICU/PyLib/__ue_py_icu_start_up__.py  as startup script
+    # -- not works now , support later -- add Plugins/UEPyICU/PyLib/__ue_py_icu_shut_down__.py as shutdown script
     ```

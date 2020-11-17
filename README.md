@@ -57,7 +57,7 @@ Thanks to https://github.com/20tab/UnrealEnginePython
      SHADER_COMPLEXITY_WITH_QUAD_OVERDRAW STATIONARY_LIGHT_OVERLAP 
      UNLIT VISUALIZE_BUFFER WIREFRAME
     """
-    lib_icu.change_view_mode(enum.LIT)
+    lib_icu.change_view_mode(enum_view_mode_index.LIT)
 
     # this method to select actor even actor is hidden
     lib_icu.select_actor(actor)

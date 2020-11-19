@@ -1,6 +1,9 @@
 // Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 
 #include "UEPyICUBPLibrary.h"
+
+#include "Editor.h"
+#include "EngineServiceMessages.h"
 #include "UEPyICU.h"
 #include "ShaderCompiler.h"
 
@@ -129,4 +132,11 @@ int32 UUEPyICUBPLibrary::GetCompilingShaderJobCount()
 void UUEPyICUBPLibrary::WaitForCompilingShaderDone()
 {
     GShaderCompilingManager->FinishAllCompilation();
+}
+
+void UUEPyICUBPLibrary::ShowViewportGizmo(bool shown)
+{
+    FEngineShowFlags* flags = GEditor->GetActiveViewport()->GetClient()->GetEngineShowFlags();
+    flags->SetGame(!shown);
+    EngineShowFlagOrthographicOverride(true, *flags);
 }

@@ -18,6 +18,9 @@
 #include "EditorViewportClient.h"
 //#endif
 
+// #include "Editor/Blutility/Classes/EditorUtilityWidget.h"
+// #include "Runtime/Engine/Classes/Kismet/BlueprintFunctionLibrary.h"
+#include "BlueprintEditorModes.h"
 
 #include "UEPyICUBPLibrary.generated.h"
 
@@ -164,4 +167,8 @@ class UUEPyICUBPLibrary : public UBlueprintFunctionLibrary
 
     UFUNCTION(BlueprintCallable)
     static void WaitForCompilingShaderDone();
+
+
+    UFUNCTION(BlueprintCallable)
+    static void ShowViewportGizmo(bool shown);
 };
